@@ -10,6 +10,8 @@ body {
   background: url("../img/background.png");
   background-repeat: no-repeat;
   background-size: contain;
+  background-color: rgb(230, 230, 230);
+  font: normal 100% Georgia, serif;
 }
 
 .wrap {
@@ -17,7 +19,11 @@ body {
 }
 
 .nav {
-  float: right;
+  /*float: right;*/
+  max-width: 70%;
+  position: absolute;
+  top: 2em;
+  left: 5em;
 }
 
 ul {
@@ -25,7 +31,19 @@ ul {
 }
 
 li {
-  display: inline;
+  color: #890101;
+  font-size: .6rem;
+  text-transform: uppercase;
+  float: left;
+  width: 20%;
+  text-align: center;
+  border-bottom: 2px solid black;
+  margin-left: 5em;
+}
+
+.navStyle {
+  font-weight: bolder;
+  font-size: .9rem;
 }
 
 aside {
