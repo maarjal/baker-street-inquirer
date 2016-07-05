@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+  background: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.wrap {
+  width: 95%;
+}
+
+.nav {
+  float: right;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline;
+}
+
+aside {
+  background: url("../img/logo-bg.png");
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 30%;
+  float: left;
+  position: relative;
+  top: 2em;
+  left: 4em;
+}
+
+aside img {
+  position: absolute;
+  top: 7.25em;
+  left: 4em;
+}
+.content {
+  width: 70%;
+  float: right;
+}
