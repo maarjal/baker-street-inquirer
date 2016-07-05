@@ -49,10 +49,11 @@ li, .single-image p {
   color: #890101;
   font-size: .6rem;
   text-transform: uppercase;
-  float: left;
+  /*float: left;*/
   width: 20%;
   text-align: center;
   margin-left: 5em;
+  display: inline-block;
 }
 
 li {
@@ -152,15 +153,15 @@ footer {
 
 @media screen and (max-width: 1300px) {
   .nav {
-    float: left;
     position: absolute;
     top: 18em;
     left: 1em;
   }
 
   li {
-    clear: both;
+    /*clear: left;*/
     margin-bottom: 2em;
+    display: list-item;
   }
 
   .single-image {
@@ -176,4 +177,66 @@ footer {
   .content {
     margin-top: 8em;
   }
+}
+
+@media screen and (max-width: 600px) {
+
+  .content {
+    width: 100%;
+  }
+
+  .nav {
+    position: absolute;
+    top: -4%;
+    left: -5%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    font-weight: normal;
+    padding-top: 1.5em;
+  }
+
+  aside {
+    background: none;
+    clear: both;
+    height: 10%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+  }
+
+  aside img {
+    margin: 0;
+    position: absolute;
+    /*top: 50%;*/
+    left: 40%;
+    /*margin-right: -50%;*/
+    transform: translate(-50%, -103%);
+  }
+
+  .nav {
+    clear: both;
+    width: 100%;
+  }
+
+.navStyle {
+    font-weight: normal;
+    font-size: .7rem;
+  }
+
+  li {
+    font-size: .7rem;
+    /*float: left;*/
+    display: inline-block;
+  }
+}
+
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
