@@ -6,6 +6,19 @@
             box-sizing: border-box;
 }
 
+/* For testing only */
+
+/**:not(body):not(html) {
+  box-sizing:border-box;
+  border:1px dashed #000;
+}
+
+.columns {
+  min-height: 100px;
+}*/
+
+/* End for testing */
+
 body {
   background: url("../img/background.png");
   background-repeat: no-repeat;
@@ -18,27 +31,32 @@ body {
   width: 95%;
 }
 
+h1 {
+  text-align: center;
+}
+
 .nav {
-  /*float: right;*/
-  max-width: 70%;
-  position: absolute;
-  top: 2em;
-  left: 5em;
+  float: right;
+  width: 65%;
+  padding: 5%;
 }
 
 ul {
   list-style: none;
 }
 
-li {
+li, .single-image p {
   color: #890101;
   font-size: .6rem;
   text-transform: uppercase;
   float: left;
   width: 20%;
   text-align: center;
-  border-bottom: 2px solid black;
   margin-left: 5em;
+}
+
+li {
+  border-bottom: 3px solid orange;
 }
 
 .navStyle {
@@ -63,6 +81,99 @@ aside img {
   left: 4em;
 }
 .content {
-  width: 70%;
+  width: 65%;
   float: right;
+}
+
+hr {
+  padding: 0;
+  border: none;
+  border-top: 1px solid #8c8c8c;
+  color: #8c8c8c;
+  text-align: center;
+}
+
+hr:after {
+  content: "victors & villains";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: rgb(230, 230, 230);
+}
+
+.images {
+  width: 100%;
+  text-align: center;
+}
+
+.single-image img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-left: 2%;
+}
+
+.images img:nth-child(2) {
+  margin-left: 0;
+}
+
+.single-image {
+  max-width: 14%;
+  display: inline;
+  float: left;
+  text-align: center;
+  margin-right: 2%;
+}
+
+.single-image p {
+  text-align: center;
+}
+
+footer {
+  clear: both;
+}
+
+.footer-div {
+  background: url("../img/ornament.png") 50%;
+  background-repeat: no-repeat;
+  width: 30%;
+  margin-top: 15%;
+  padding-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-div img {
+  max-width: 100%;
+}
+
+/*Media Queries*/
+
+@media screen and (max-width: 1300px) {
+  .nav {
+    float: left;
+    position: absolute;
+    top: 18em;
+    left: 1em;
+  }
+
+  li {
+    clear: both;
+    margin-bottom: 2em;
+  }
+
+  .single-image {
+    max-width: 30%;
+  }
+
+  .footer-div {
+    clear: both;
+    width: 100%;
+    text-align: center;
+  }
+
+  .content {
+    margin-top: 8em;
+  }
 }
